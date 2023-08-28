@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Spin</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        background-color:rgba(255, 255, 255);
+    }
+    #container{
+        position:absolute;
+        width:410px;
+        height:410px;
+        left: calc((100vw - 410px) /2);
+        top: calc((100vh - 410px) /2);
+       
+        /* border-radius: 50%; */
+        
+        
+    }
+    #spin{
+        position:absolute;
+        width:400px;
+        height: 400px;
+        font-size: 25px;
+        background-image: radial-gradient(transparent 57%,57%,#ffffff 59%,59%,transparent 100%),conic-gradient(#fb431d 30deg,30deg,#e83547 90deg,90deg,#fab520 150deg,150deg,#54c0a8 210deg,210deg,#0eaadb 270deg,270deg,#796eb2 330deg,330deg,#fb431d);
+        border:5px solid #555657;
+        border-radius: 50%;
+        transition-property: transform;
+        transition-timing-function: ease;
+        
+    }
+    #swing-container{
+        position: absolute;
+        width:44px;
+        height:44px;
+        top:183px;
+        left:183px;
+        cursor: pointer;
+     }
+    #swing{
+        position:absolute;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width:40px;
+        height:40px;
+        background-color: rgb(97, 96, 95);
+        border-radius:50%;
+        font-weight: bolder;
+        color:rgb(255, 255, 255);
+        border:2px solid rgb(255, 254, 253);
+        cursor:pointer;
+        z-index:4;
+     }
+     
+     /* #swing-container:hover{
+         transform:scale(1.1);
+     } */
+    #swing-tip{
+        position: absolute;
+        width:35px;
+        height: 40px;
+        right: -13px;
+        top:2px;
+        background-color: rgb(255, 254, 253);
+        clip-path: polygon(0% 100%,100% 50%,0% 0%);
+        z-index:3;
+        
+    }
+    .price{
+        position:absolute;
+        font-weight: 900;
+        color:#ffffff;
+    }
+    .lucky{
+        position: absolute;
+        font-weight: 800;
+        color:#ffffff;
+        
+    }
+    .price1{
+        left: 39%;
+        top:2%;
+        
+    }
+    .lucky1{
+        left: 38%;
+        top:25%;
+        transform: rotate(-90deg);
+    }
+
+    .price2{
+        left: 81%;
+        top:25%;
+        transform: rotate(60deg);
+    }
+    .lucky2{
+        left: 58%;
+        top:35%;
+        transform: rotate(-30deg);
+        
+    }
+    .price3{
+        left: 81%;
+        top:69%;
+        transform: rotate(120deg);
+    }
+    .lucky3{
+        left:55%;
+        top:58%;
+        transform: rotate(30deg);
+        
+    }
+    .price4{
+        left: 42%;
+        top:92%;
+        transform: rotate(180deg);
+    }
+    .lucky4{
+        left: 38%;
+        top:67%;
+        transform: rotate(90deg);
+        
+    }.price5{
+        left: 2%;
+        top:69%;
+        transform: rotate(-120deg);
+    }
+    .lucky5{
+        left: 25%;
+        top:57%;
+        transform: rotate(150deg);
+        
+    }
+    .price6{
+        left: 1%;
+        top:25%;
+        transform: rotate(-60deg);
+    }
+    .lucky6{
+        font-size: 22px;
+        left: 14%;
+        top:35%;
+        transform: rotate(-150deg);
+        
+    }
+    .lucky-cheer{
+        position:absolute;
+        width:400px;
+        height: 400px;
+        border-radius: 50%;
+        top:5px;
+        left:5px;
+        z-index:6;
+    }
+    .button{
+        position: absolute;
+        width:300px;
+        height: 50px;
+        left:calc((100vw - 300px) / 2);
+        top:calc((100vh - 500px) / 2 + 500px);
+        color:rgb(0, 0, 0);
+        background:#f3c963;
+        font-size:25px;
+        text-align:center;
+        border-radius:8px;
+        outline:none ;
+        cursor: pointer;
+    }
+    
+    
+
+</style>
+<body>
+    <div id="container">
+        <div id="spin">
+            <div class="price price1">
+                Unlucky
+            </div>
+            <span class="lucky lucky1">TryAgain</span>
+            <div class="price price2">
+                Lucky 
+            </div>
+            <span class="lucky lucky2">Iphone 12</span>
+            <div class="price price3">
+                Lucky 
+            </div>
+            <span class="lucky lucky3">1000 Coins</span>
+            <div class="price price4">
+                Lucky
+            </div>
+            <span class="lucky lucky4">Macbook</span>
+            <div class="price price5">
+                Lucky 
+            </div>
+            <span class="lucky lucky5">iPod5</span>
+            <div class="price price6">
+                Lucky 
+            </div>
+            <span class="lucky lucky6">1LakhCoins</span>
+        </div>
+            <div id="swing-container">
+                
+                <span id="swing">Spin
+                </span>
+                <span id="swing-tip">
+                </span>
+            </div>
+    </div>
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your Price</title>
+    <style>
+        body{
+            background-color: rgb(16, 23, 26);
+            background-image: url(luckycheer.gif);
+            background-repeat:no-repeat; 
+            background-size:cover;
+            
+        }
+        h1{
+            font-size: 80px;
+            text-align: center;
+            color: rgb(143, 255, 121);
+            margin-top: 30vh;
+        
+        }
+        strong{
+            color:white;
+        }
+        .button{
+        position: absolute;
+        width:300px;
+        height: 50px;
+        left:calc((100vw - 300px) / 2);
+        top:calc((100vh - 500px) / 2 + 500px);
+        color:rgb(0, 0, 0);
+        background:#f3c963;
+        font-size:25px;
+        text-align:center;
+        border-radius:8px;
+        outline:none ;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <h1>You Won!</h1>
+    <button class="button"id
+    ="home">Go To HomePage</button>
+<script>
+    document.getElementById("home").addEventListener("click",() => {
+        window.open("index.html","_self");
+    })
+    let luckyNum = localStorage.getItem("luckyNum");
+    let price = ["","100K Coins","iPod","Mackbook","1K Coins","iPhone12"];
+    document.querySelector("h1").innerHTML+= `<br><strong color="white">${price[luckyNum-1]}</strong>`;
+</script>    
+</body>
+</html>
